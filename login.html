@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="icon" href="img/Dalia Ass.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS inline, você pode mover para login.css */
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #81410d;
+            color: rgb(161, 75, 24);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: rgb(194, 100, 46);
+            text-decoration: none;
+        }
+
+        .login-form {
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 300px;
+            background: #f9f9f9;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background: #612306;
+            color: rgb(168, 92, 29);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background: #555;
+        }
+
+        footer {
+            margin-top: auto;
+            background: #642207;
+            color: rgb(167, 99, 22);
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li class="dropdown">
+                    <a href="#servicos" class="dropbtn">Serviços</a>
+                    <ul class="dropdown-content">
+                    
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulário de Login -->
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

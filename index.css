@@ -1,0 +1,217 @@
+/* Estilo Geral */
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho e Navegação */
+nav {
+    background-color: #b47139;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 9px;
+}
+
+nav ul li a {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    color: rgb(221, 183, 126);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 4px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #975339;
+}
+
+/* Botão de Login */
+.btn-login {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: #a8580c;
+    color: rgb(207, 154, 104);
+    font-size: 15px;
+    font-family: "New Amsterdam", sans-serif;
+    border-radius: 10px;
+}
+
+/* Estilo do Dropdown */
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #703c0a;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #814003;
+}
+
+/* Exibir Dropdown no Hover */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    max-width: 600px; /* Adjusted for better responsiveness */
+    height: 300px;
+    margin: 100px auto 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* Adjusted for three slides */
+    animation: slideAnimation 30s infinite; /* Adjusted duration */
+}
+
+.slide {
+    flex: 0 0 100%; /* Make each slide take up 100% width */
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.slide img {
+    width: 100%; /* Use full width of slide */
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #b47139;
+    color: rgb(221, 183, 126);
+    font-family: "Josefin Sans", sans-serif;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for spacing */
+}
+
+.footer-section {
+    flex-basis: 23%; /* Adjusted for consistent layout */
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 17px;
+    color: #814003;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgb(221, 183, 126);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(114, 51, 14);
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(136, 69, 38);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: rgb(185, 89, 52);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    padding: 9px 0;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Estilo dos Cards */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: #f4f4f4;
+}
+
+.card {
+    background: rgb(136, 69, 38);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card h2 { /* Changed to h2 to match your HTML */
+    margin-top: 15px;
+    font-size: 20px;
+}

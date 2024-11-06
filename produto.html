@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produto</title>
+    <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="icon" href="img/Dalia Ass.png" type="image/x-icon">
+</head>
+<body>
+
+    <script>
+        // Espera o carregamento completo do DOM
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleciona todas as miniaturas
+            const miniaturas = document.querySelectorAll('.miniatura');
+            const imagemPrincipal = document.getElementById('imagem-principal');
+    
+            // Adiciona um evento de clique a cada miniatura
+            miniaturas.forEach(miniatura => {
+                miniatura.addEventListener('click', function() {
+                    // Atualiza a imagem principal com a fonte da miniatura clicada
+                    const novaImagem = this.getAttribute('data-imagem');
+                    imagemPrincipal.src = novaImagem;
+                });
+            });
+        });
+    </script>
+
+    <main>
+        <section class="produto">
+            <div class="imagens-produto">
+                <img src="img/1.jpg" alt="Produto principal" class="imagem-principal" id="imagem-principal">
+                <div class="miniaturas">
+                    <img src="img/2.jpg" alt="miniatura 1" class="miniatura" data-imagem="img/3.jpg">
+                    <img src="img/4.jpg" alt="miniatura 2" class="miniatura" data-imagem="img/5.jpg">
+                    <img src="img/6.jpg" alt="miniatura 3" class="miniatura" data-imagem="img/5.jpg">
+                </div>
+            </div>
+            <div class="detalhes-produto">
+                <h2>Buquê Mulheres Apaixonadas!</h2>
+                <p class="descricao">Buquê para o dia especial e para o dia a dia, presenteie quem te ama.</p>
+                <p class="preco">R$ 130,99</p>
+                <form class="opções-compra">
+                    <label for="tamanho">Tamanho do buquê:</label>
+                    <select id="tamanho">
+                        <option>P</option>
+                        <option>M</option>
+                        <option>G</option>
+                        <option>GG</option>
+                    </select>
+                    <label for="flor">Flores:</label>
+                    <select id="flor">
+                        <option>Rosa</option>
+                        <option>Girassol</option>
+                        <option>Margarida</option>
+                        <option>Lavanda</option>
+                        <option>Tulipa</option>
+                    </select>
+                    <button type="submit">Comprar</button>
+                </form>
+            </div>
+        </section>
+        <section class="comentarios">
+            <h3>Comentários dos Clientes</h3>
+            <div class="comentario">
+                <img src="img/favi.ico" alt="Foto de Maria" class="foto-usuario">
+                <p><strong>Maria:</strong> Lindas as flores, ganhei do meu namorado e amei!</p>
+            </div>
+            <div class="comentario">
+                <img src="img/55.ico" alt="Foto de Julia" class="foto-usuario">
+                <p><strong>Julialima:</strong> Perfeito, dei de presente para minha amiga!</p>
+            </div>
+            <div class="comentario">
+                <img src="img/333.ico" alt="Foto de Ana" class="foto-usuario">
+                <p><strong>Ana Maria:</strong> Sem palavras, maravilhoso...</p>
+            </div>
+            <div class="comentario">
+                <img src="img/777.ico" alt="Foto de Carlos" class="foto-usuario">
+                <p><strong>Carlos:</strong> Comprei para minha esposa e ela amou muito!</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
